@@ -1,0 +1,376 @@
+/* Apply a natural box layout model to all elements */
+*, 
+*:before, 
+*:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+ }
+
+/* To set the page the way I want it */
+html {
+  width:1442px;
+  height: 1829px;
+  background-color:#222222;
+}
+
+ body {
+  height: 1820px;
+  width:1442px;
+  position: relative;
+  right:9px;
+ }
+
+ /*Fonts*/
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('data/Bebas.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'Amble';
+    src: url('data/Amble.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'Aaargh';
+    src: url('data/Aaargh.ttf') format('truetype');
+  }  
+ 
+/* Summary - All the rows in the page */
+.firstRow {
+  height: 8rem;
+  width: 1442px;
+  position: fixed;
+  top:0px;
+  background-color: white;
+  z-index: 3;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.secondRow {
+  height: 40.5rem;
+  width: 1450px;
+  position: relative;
+  top: 97px;
+  right:10px;
+  bottom: 90px;
+}
+
+.thirdRow {
+  height: 19rem;
+  width: 100%;
+  position: relative;
+  top:97px;
+  bottom: 10px;
+  background-color: #222222;  
+}
+
+.fourthRow {
+  height: 19rem;
+  width: 1442px;
+  position: relative;
+  top:97px;
+  bottom: 3px;
+  background-color: #F2F2F2;
+  color: #F2F2F2;
+}
+
+.fifthRow {
+  height: 15rem;
+  position: relative;
+  top:97px;
+  background-color: white;
+}
+
+.sixthRow {
+  height: 12.9rem;
+  position: relative;
+  top:97px;
+  background-color: #222222;
+}
+
+/*Navigation*/
+nav {
+  position: relative;
+  font-size: 1rem;
+  display: inline;  
+  font-family: 'Amble', sans-serif;
+  bottom: 75px;  
+}
+
+.nav1{
+  left: 5px;
+}
+
+.nav2{
+  left: 980px;
+}
+
+
+/*All the headers of the page*/
+h1 {
+  font-size: 3.2rem;
+  font-family: 'Bebas', sans-serif;
+  left: 135px;
+  position: relative;
+  width: 800px;
+  bottom: 10px;
+  color: white;
+  text-shadow:1px 1px 1px #000;
+}
+
+h2 {
+  font-family: 'Amble', sans-serif;
+  position: relative;
+  font-size: 2rem;
+  letter-spacing: -1.5px;
+  color: white;
+  text-shadow:1px 1px 1px #000;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.3rem;
+  font-family: 'Bebas', sans-serif;
+  color: black;
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+}
+
+h4,
+p {
+  font-family: 'Amble', sans-serif;
+  position: relative;
+  font-size: 1.2rem;
+  letter-spacing: -1.5px;
+  color: white;
+  text-shadow:1px 1px 1px #000;
+  text-align: center;
+}
+
+.header {
+  position: absolute;
+  top: 8.1rem;
+  right: 185px;
+  z-index: 2;
+  width: 1100px;
+}
+
+.subheader {
+  font-family: 'Amble', sans-serif;
+  position: relative;
+  font-size: 2rem;
+  letter-spacing: -1.5px;
+  color: white;
+  text-shadow:1px 1px 1px #000;
+  text-align: center;
+}
+
+/*My Awesome button*/
+button {
+  -moz-box-shadow:inset -1px -6px 14px -7px #f9eca0;
+  -webkit-box-shadow:inset -1px -6px 14px -7px #f9eca0;
+  box-shadow:inset -1px -6px 14px -7px #f9eca0;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f2ab1e) );
+  background:-moz-linear-gradient( center top, #f0c911 5%, #f2ab1e 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f2ab1e');
+  background-color:#f0c911;
+  -webkit-border-top-left-radius:20px;
+  -moz-border-radius-topleft:20px;
+  border-top-left-radius:20px;
+  -webkit-border-top-right-radius:20px;
+  -moz-border-radius-topright:20px;
+  border-top-right-radius:20px;
+  -webkit-border-bottom-right-radius:20px;
+  -moz-border-radius-bottomright:20px;
+  border-bottom-right-radius:20px;
+  -webkit-border-bottom-left-radius:20px;
+  -moz-border-radius-bottomleft:20px;
+  border-bottom-left-radius:20px;
+  text-indent:0.1px;
+  display:inline-block;
+  color:#ffffff;
+  font-family: 'Bebas', sans-serif;
+  font-size:20px;
+  font-weight:normal;
+  font-style:normal;
+  height:62px;
+  line-height:52px;
+  width:250px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 1px #000;
+
+}
+
+button:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #f0c911) );
+  background:-moz-linear-gradient( center top, #f2ab1e 5%, #f0c911 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911');
+  background-color:#f2ab1e;
+}
+
+button:active {
+  position:relative;
+  top:1px;
+}
+
+.mainButton {
+  position: relative;
+  left:420px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+/* Second Row Section */
+.background {
+    background: url('http://watchplayread.com/wp-content/blogs.dir/1/files/2013/09/VINYL-RECORDS2.jpg') no-repeat left center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;  
+    min-height: 100%; 
+    opacity: .8;
+  }
+
+/* Third Row Section */
+.ColumnsThirdRow {
+  height:19rem;
+  width: 35%;
+  position: relative;
+  left: 200px;
+  float: left;
+}
+
+.firstColumnButton{
+  position: relative;
+  left: 120px;
+}
+
+.secondColumnButton{
+  position: relative;
+  top:18px;
+  left: 120px;
+}
+
+img {
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.linksBottom {
+  color:white;
+}
+
+a:hover {
+  color:#f2ab1e;
+}
+
+/*Fourth Row Section - Comment */
+.firstColumnRow {
+  height:12.9rem;
+  width: 35%;
+  float: left;
+}
+
+.secondColumnRow {
+  height: 12.9rem;
+  width: 35%;
+  float: left;
+}
+
+.thirdColumnRow {
+  height: 12.9rem;
+  width: 30%;
+  float: right; 
+}
+
+.commentBox {
+  height: 200px;
+  width: 305px;
+  position: relative;
+  left: 65px;
+  top: 45px;
+  color: white;
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+p.comments {
+  text-align: left;
+  font-size: 0.9rem;
+  height: 100px;
+  width: 250px;
+  position:relative;
+  left:25px;
+  top:15px;
+}
+
+/* Fifth Row Section - Single Button */
+.bottomButton {
+  position: relative;
+  left:580px;
+  top: 90px;
+}
+
+.comments,
+.customers,
+li {
+  font-family: 'Aaargh', sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  letter-spacing: 0.3px;
+  line-height: 20.5px;
+  color: black;
+  text-shadow: none;
+}
+
+li {
+  font-family: "Bebas", sans-serif;
+  color:white;
+  position: relative;
+  right: 20px;
+}
+
+.customers {
+  font-size: 0.8rem;
+}
+
+/* Sixth Row Section */
+ul {
+  list-style-type: none;
+}
+
+.contactus {
+  height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
